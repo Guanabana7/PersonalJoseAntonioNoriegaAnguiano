@@ -1,0 +1,108 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program.in()</title>
+    <link rel="icon" href="Imagenes/Logo.jpg" type="image/png">
+    <link rel="stylesheet" href="Estilos.css">
+</head>
+<body>
+
+    <header>
+        <div class="btn-logo" onclick="redireccionarAHomePage()"></div>
+    </header>
+    <div class="container">
+        <button class="btn-superior" onclick="redireccionarAHomePage()">
+            <img src="Imagenes/home.jpg" alt="Icono de Home">
+        </button>
+        <input type="text" class="barra-busqueda" placeholder="Buscar">
+        <button class="btn-superior" onclick="toggleDepartamentos()">Temas</button>
+        <ul class="menu" id="departamentosMenu">
+            <li><a href="Condicionales.html" onclick="redireccionaACondicionales()">Condicionales</a></li>
+            <li><a href="Secuenciales.html"onclick="redireccionarAHomePage()">Secuenciales</a></li>
+            <li><a href="Repetitivas.html"onclick="redireccionaARepetitivas()">Repetitivas</a></li>
+        </ul>
+    </div>
+    <script src="Scripts/toggleDepartamentos.js"></script>
+    <div class="panelPrincipal">
+        <button class="tema-label" id="miBoton">Secuenciales</button>
+        <section class="panel-izquierdo">
+            <pre>
+                <code class="lang-java s-code-block">
+                    <div style="text-align: left;"> 
+                        public class HelloWorld {<br>
+                        public static void main(String[] args) {<br>
+                        System.out.println("Hello, World!");<br>
+                        }}<br>
+                    </div>
+                </code>
+            </pre>
+        </section>
+        <button class="tema-label" id="miBoton">Suma de Dos Números</button>
+<section class="panel-izquierdo">
+    <pre>
+        <code class="lang-java s-code-block">
+            <div style="text-align: left;"> 
+                import java.util.Scanner;<br>
+                
+                public class SumaDosNumeros {<br>
+                    public static void main(String[] args) {<br>
+                        // Crear un objeto Scanner para la entrada del usuario<br>
+                        Scanner scanner = new Scanner(System.in);<br>
+
+                        // Solicitar al usuario que ingrese dos números<br>
+                        System.out.print("Ingresa el primer número: ");<br>
+                        int numero1 = scanner.nextInt();<br>
+                        
+                        System.out.print("Ingresa el segundo número: ");<br>
+                        int numero2 = scanner.nextInt();<br>
+
+                        // Calcular y mostrar la suma de los dos números<br>
+                        int suma = numero1 + numero2;<br>
+                        System.out.println("La suma de los números es: " + suma);<br>
+
+                        // Cerrar el objeto Scanner<br>
+                        scanner.close();<br>
+                    }<br>
+                }<br>
+            </div>
+        </code>
+    </pre>
+</section>
+
+    </div>
+    <div class="panelExplicacion">
+        Aqui va la explicacion del codigo
+    </div>
+    <div class="cuerpo">
+        <div class="panelAnuncios">
+            <button class="btn-superior"><a href="https://youtu.be/LEf9nXbdTjI" target="_blank">Secuenciales</a></button>
+        </div>
+        <div class="panelAnuncios">
+            <button class="btn-superior"><a href="https://youtu.be/gGBgYs8QlWc" target="_blank">Condicionales</a></button>
+        </div>
+        <div class="panelAnuncios">
+            <button class="btn-superior"><a href="https://youtu.be/PZplJ5ahW_8" target="_blank">Repetitivas</a></button>
+        </div>
+    </div>
+    <script>
+        function toggleDepartamentos() {
+            var menu = document.getElementById("departamentosMenu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
+    <script>
+        function redireccionaACondicionales() {
+            window.location.href = 'Condicionales.html';
+        }
+        function redireccionaARepetitivas() {
+            window.location.href = 'Repetitivas.html';
+        }
+        function redireccionarAHomePage() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
